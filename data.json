@@ -1,0 +1,49 @@
+[{
+    "id": 1,
+    "categoria": "Bolsa de café",
+    "tipo": "250gr.",
+    "nombre": "Brasil Cursera",
+    "precio": 550,
+    "imagen": "bolsa-brasil.jpg"
+},
+{
+    "id": 2,
+    "categoria": "Bolsa de café",
+    "tipo": "250gr.",
+    "nombre": "Etiopía Najá",
+    "precio": 650,
+    "imagen": "bolsa-etiopia.jpg"
+},
+{
+    "id": 3,
+    "categoria": "Bolsa de café",
+    "tipo": "250gr.",
+    "nombre": "Guatemala GTA",
+    "precio": 700,
+    "imagen": "bolsa-guate.jpg"
+},
+{
+    "id": 4,
+    "categoria": "Suscripción",
+    "tipo": "Semanal",
+    "nombre": "Suscripción Everyday",
+    "precio": 690,
+    "imagen": "sus-everyday.png"
+},
+{
+    "id": 5,
+    "categoria": "Suscripción",
+    "tipo": "Mensual",
+    "nombre": "Suscripción Simple",
+    "precio": 900,
+    "imagen": "sus-simple.png"
+},
+{
+    "id": 6,
+    "categoria": "Suscripción",
+    "tipo": "Mensual",
+    "nombre": "Suscripción Doble Shot",
+    "precio": 1700,
+    "imagen": "sus-doble.png"
+}
+]
