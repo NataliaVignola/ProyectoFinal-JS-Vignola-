@@ -13,7 +13,6 @@ fetch('/data.json')
         let btnSuscripcion = document.querySelector('#btn-suscripcion')
         let btnTodo = document.querySelector('#btn-todo')
 
-
         let carrito = [];
         const divisa = '$';
         const DOMitems = document.querySelector('#items');
@@ -23,7 +22,6 @@ fetch('/data.json')
         const DOMbotonFinalizarCompra = document.getElementById('btnFinalizarCompra');
         const miLocalStorage = window.localStorage;
         const productContainer = document.querySelector('.product-container');
-
 
         //Función para visualizar los productos en el html
         function renderizarProductos(categoriaProductos) {
@@ -112,19 +110,17 @@ fetch('/data.json')
                 cardCarrito.classList.add('card-carrito');
 
                 cardCarrito.innerHTML = `
-        <div class='cart-name'>
-            <h3 class='cart-categoria'>${miItem[0].tipo}</h3>
-            <h3 class='cart-categoria'>${miItem[0].nombre}</h3>
-            <h4 class="cart-quantity cart-categoria"> x ${numeroUnidadesItem} </h4>
-        </div>
-
-        <h4 class="cart-price cart-categoria"> $ ${miItem[0].precio}</h4>`
+        <div class='cart-item'>
+            <h3 class='cart-categoria'>${miItem[0].categoria}</h3>
+            <h3 class='cart-name'>${miItem[0].nombre}</h3>
+            <h4 class="cart-cantidad"> Cantidad: ${numeroUnidadesItem}</h4>
+            <h4 class="cart-precio"> $ ${miItem[0].precio}</h4>
+        </div>`
 
                 //Botón bote de basura, para borrar item del carrito
                 const removebtn = document.createElement('button');
-                removebtn.classList.add('btn', 'btn-eliminar');
+                removebtn.classList.add('btn-eliminar');
                 removebtn.innerHTML = `<img class="img-bote" id="${item}" src=./img/bote-basura.svg alt="">`;
-                removebtn.style.marginLeft = '1rem';
                 removebtn.addEventListener('click', borrarItemCarrito)
                 cardCarrito.appendChild(removebtn);
                 DOMcarrito.appendChild(cardCarrito);
@@ -158,7 +154,6 @@ fetch('/data.json')
 
         //Función para vaciar el carrito con alerta 
         function vaciarCarrito() {
-
             const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -195,9 +190,7 @@ fetch('/data.json')
         }
 
         function finalizarCompra() {
-
             const total = calcularTotal();
-
             const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -247,7 +240,6 @@ fetch('/data.json')
         }
 
         //Eventos
-
         DOMbotonVaciar.addEventListener('click', vaciarCarrito);
         DOMbotonFinalizarCompra.addEventListener('click', finalizarCompra);
 
